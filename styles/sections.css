@@ -1,36 +1,88 @@
+section header {
+  border-top: .1rem solid var(--stroke-color);
+  padding-block: 1.2rem 2.4rem;
+  font: var(--text-span);
+
+  a {
+    justify-self: end;
+    align-items: center;
+    gap: .8rem;
+
+    span {
+      background-image: url(../assets/icon/ArrowRight.svg);
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    span {
+      transition: background .3s ease-in-out;
+    }
+
+    &:hover span {
+      background-image: url(../assets/icon/ArrowRightHover.svg);
+    }
+  }
+}
+
 #featured {
   img {
     height: 100%;
     object-fit: cover;
     border-radius: .4rem;
   }
+  .card {
+    border-radius: .4rem;
+    overflow: hidden;
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      top: 50%;
+      background: linear-gradient(180deg, transparent 0%, #020617);
+    }
+  
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      padding: 2.4rem;
+  
+      /* na figcaption, tem alguma classe text-lg? se sim mude o padding para 12px */
+      &:has(.text-lg) {
+        padding: 1.2rem;
+      }
+  
+      h2 {
+        margin-top: .8rem;
+      }
+    }
+  }
 }
 
-.card {
-  border-radius: .4rem;
-  overflow: hidden;
-  position: relative;
+#weekly {
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    top: 50%;
-    background: linear-gradient(180deg, transparent 0%, #020617);
+  & > div {
+    grid-template-columns: repeat(4, 29.2rem);
   }
 
-  figcaption {
-    position: absolute;
-    bottom: 0;
-    padding: 2.4rem;
+  img {
+    height: 16rem;
+    object-fit: cover;
+  }
 
-    /* na figcaption, tem alguma classe text-lg? se sim mude o padding para 12px */
-    &:has(.text-lg) {
-      padding: 1.2rem;
+  figure {
+    position: relative;
+
+    .content-tag {
+      position: absolute;
+      top: .8rem;
+      left: .8rem;
     }
 
-    h2 {
+    p {
       margin-top: .8rem;
+      font-weight: 800;
     }
   }
 }
