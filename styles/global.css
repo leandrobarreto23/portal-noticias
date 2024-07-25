@@ -60,3 +60,18 @@ img {
 main {
   margin-top: 4rem;
 }
+
+.content-tag {
+  padding: .4rem .8rem;
+
+  display: inline-block;
+
+  border-radius: .4rem;
+  background-color: var(--brand-color-dark);
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font: 500 1rem/1.2 var(--font-family);
+
+  box-shadow: 0 .4rem 1.6rem rgba(2, 6, 23, 0.251);
+}
