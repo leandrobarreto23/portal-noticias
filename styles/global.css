@@ -15,8 +15,8 @@
   --h2: 800 1.6rem/140% var(--font-family);
   --h2: 800 1.4rem/140% var(--font-family);
 
-  --text: 400 1.6rem/140% var(--font-family)
-  --text-sm: 400 1.4rem/160% var(--font-family)
+  --text: 400 1.6rem/140% var(--font-family);
+  --text-sm: 400 1.4rem/160% var(--font-family);
   --text-span: 600 1.4rem/145% var(--font-family);
 }
 
@@ -27,6 +27,7 @@
 }
 
 body {
+  /* font-size: 1.6rem; */
   font: var(--text);
   color: var(--text-color-primary);
   background-color: var(--bg-color);
@@ -44,4 +45,19 @@ a:hover {
 
 h1, h2, h3 {
   font: inherit;
+}
+
+.container {
+  max-width: 128rem;
+  margin-inline: auto;
+  padding-inline: 3.2rem;
+}
+
+/* utility-first */
+.grid {
+  display: grid;
+}
+
+.grid-flow-col {
+  grid-auto-flow: column;
 }
