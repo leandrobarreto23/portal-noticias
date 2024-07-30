@@ -58,8 +58,16 @@ img {
 }
 
 main {
-  margin-top: 4rem;
-  gap: 8rem;
+  margin-block: 4rem 8rem;
+  row-gap: 8rem;
+  column-gap: 3.2rem;
+
+  grid-template-columns: 2fr 1.3fr;
+
+  grid-template-areas: 
+  "featured featured"
+  "weekly weekly"
+  "ai aside";
 }
 
 .content-tag {
